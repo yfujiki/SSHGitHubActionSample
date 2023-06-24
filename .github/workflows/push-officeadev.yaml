@@ -14,4 +14,4 @@ jobs:
         host: ${{ secrets.OFFICEADEVHOST }}
         username: ${{ secrets.OFFICEADEVUSER }}
         key: ${{ secrets.OFFICEADEVSSHKEY }}
-        script: "pull.sh"
+        script: "sh pull.sh"
