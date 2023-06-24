@@ -1,0 +1,17 @@
+name: Run script on server
+on: 
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: OfficeaDev
+    steps:
+    - name: Run script
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.OFFICEADEVHOST }}
+        username: ${{ secrets.OFFICEADEVUSER }}
+        key: ${{ secrets.OFFICEADEVSSHKEY }}
+        script: "pull.sh"
