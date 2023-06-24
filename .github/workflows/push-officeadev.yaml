@@ -14,7 +14,7 @@ jobs:
         host: ${{ secrets.OFFICEADEVHOST }}
         username: ${{ secrets.OFFICEADEVUSER }}
         key: ${{ secrets.OFFICEADEVSSHKEY }}
-        run: |
+        script: |
           whoami
           ssh-add -l
-          sh pull.sh | tee > github_action/$(date +"output_%Y%m%d_%H%M%S").log
+          sh pull.sh
