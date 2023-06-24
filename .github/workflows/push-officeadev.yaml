@@ -17,4 +17,4 @@ jobs:
         run: |
           whoami
           ssh-add -l
-          sh pull.sh
+          sh pull.sh | tee > github_action/$(date +"output_%Y%m%d_%H%M%S").log
